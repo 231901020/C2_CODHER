@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Real-Time Intrusion Detection</h2>
+<p>Shows alerts for possible intrusions based on packet inspection and AI models.</p>
+
+<div id="intrusion-alerts">Loading intrusion detection status...</div>
+
+<script>
+    function checkIntrusions() {
+        fetch("/intrusion_detection_status")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("intrusion-alerts").innerHTML = data;
+        });
+    }
+    setInterval(checkIntrusions, 3000);
+    checkIntrusions();
+</script>
+{% endblock %}

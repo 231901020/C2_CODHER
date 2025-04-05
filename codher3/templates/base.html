@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C2 Behavior Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <h2>C2 Behavior Simulator - Blue Team Training</h2>
+    <a href="/">Home</a> |
+    <a href="/realtime-monitoring">Real-Time Monitoring</a> |
+    <a href="/simulator">GenAI C2 Simulator</a>
+</div>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

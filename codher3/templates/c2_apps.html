@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>C2 Blue Team Defense Applications</h2>
+
+<div class="button-group">
+    <a href="{{ url_for('network_monitoring') }}"><button>Network Behavior Monitoring</button></a>
+    <a href="{{ url_for('intrusion_detection') }}"><button>Real-Time Intrusion Detection</button></a>
+    <a href="{{ url_for('attack_response') }}"><button>Simulated Attack Response</button></a>
+</div>
+
+{% endblock %}
