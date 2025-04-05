@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Simulated Attack Response</h2>
+<p>Trigger simulated responses to attack scenarios.</p>
+
+<form method="POST">
+    <button type="submit" name="simulate">Run Simulated Response</button>
+</form>
+
+{% if result %}
+<p><strong>{{ result }}</strong></p>
+{% endif %}
+{% endblock %}
